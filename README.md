@@ -1,8 +1,8 @@
 # Wilayah Administrasi Indonesia
 
-** Cara penggunaan
+**Cara penggunaan
 
-Data in digunakan untuk app bernama 'geo', silahkan app in di generate dengan cara [code](./manage.py startapp geo).
+Data in digunakan untuk app bernama 'geo', silahkan app in di generate dengan cara ```./manage.py startapp geo)```.
 Buat folder fixtures di dalam app `geo`, copy atau pindahkan file provinces.json, regency.json, district.json, dan village.json ke dalam folder fixtures.
 
 contoh format models:
@@ -47,4 +47,14 @@ class Village(models.Model):
     def __unicode__(self):
         return u'%s, %s' % (self.name, self.district.name)
 
+```
+
+untuk update database jangan lupa makemigrations, dan migrate
+```bash
+./manage.py makemigrations
+./manage.py migrate
+./manage.py loaddata province
+./manage.py loaddata regency
+./manage.py loaddata district
+./manage.py loaddata village
 ```
