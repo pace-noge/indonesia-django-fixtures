@@ -1,6 +1,6 @@
 # Wilayah Administrasi Indonesia
 
-**Cara penggunaan
+**Cara penggunaan**
 
 Data in digunakan untuk app bernama 'geo', silahkan app in di generate dengan cara ```./manage.py startapp geo)```.
 Buat folder fixtures di dalam app `geo`, copy atau pindahkan file provinces.json, regency.json, district.json, dan village.json ke dalam folder fixtures.
